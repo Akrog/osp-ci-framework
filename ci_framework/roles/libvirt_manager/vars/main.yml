@@ -30,6 +30,7 @@ cifmw_libvirt_manager_dependency_packages:
   - qemu-kvm
   - libguestfs
   - guestfs-tools
+  - python3-lxml
 
 cifmw_libvirt_manager_polkit_rules_dir: /etc/polkit-1/rules.d
 cifmw_libvirt_manager_polkit_rules_file: "{{ cifmw_libvirt_manager_polkit_rules_dir }}/80-libvirt-manage.rules"

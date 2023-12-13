@@ -24,6 +24,7 @@
 # https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.14/html/getting_started_guide/installation_gsg#required-software-packages_gsg
 cifmw_rhol_crc_dependency_packages:
   - NetworkManager
+  - python3-lxml
 
 cifmw_rhol_crc_sudoers_file_name: rhol_crc
 # Configuration variables:
