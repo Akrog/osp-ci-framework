@@ -38,7 +38,7 @@ command -v gcc || sudo dnf -y install gcc
 
 PIP='pip'
 case ${USE_VENV} in
-    'y|yes|true')
+    y|yes|true)
         PIP="${HOME}/test-python/bin/pip"
         USE_VENV='yes'
         ${PYTHON_EXEC} -m venv -h 2>&1>/dev/null || sudo "${RHT_PKG_MGR}" install -y python*-virtualenv
@@ -46,7 +46,7 @@ case ${USE_VENV} in
         echo ### USING VIRTUALENV
         echo
         ;;
-    'n|no|false')
+    n|no|false)
         PIP="pip"
         USE_VENV='no'
         echo
