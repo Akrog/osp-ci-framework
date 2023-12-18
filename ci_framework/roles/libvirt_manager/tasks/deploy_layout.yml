@@ -42,7 +42,7 @@
 - name: Create temporary ssh keypair
   ansible.builtin.command:
     cmd: >-
-      ssh-keygen -t ed25519
+      ssh-keygen -t rsa-sha2-256
       -f {{ ansible_user_dir }}/.ssh/cifmw_reproducer_key -P '' -q
     creates: "{{ ansible_user_dir }}/.ssh/cifmw_reproducer_key"
 

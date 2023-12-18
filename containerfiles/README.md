@@ -18,7 +18,7 @@ In the examples bellow, the options will do:
 
 - `-w /home/prow`: change the working directory to /home/prow
 - `-e HOME=/home/prow`: switch *prow* user home directory location.
-- `-v ~/.ssh/id_ed25519:/home/prow/.ssh/id_ed25519`: exposes your private SSH key.
+- `-v ~/.ssh/id_cifw:/home/prow/.ssh/id_cifw`: exposes your private SSH key.
 - `-v .:/home/prow/ci-framework`: exposes the project content in /home/prow/ci-framework in the container.
 - `-v ~/inventory.yml:/home/prow/ci-framework/inventory.yml`: an example of how you can override the inventory.yml.
 - `-v ~/custom_files:/home/prow/custom_files`: mounts the custom_files directory. This is useful for incorporating various files that cifmw requires, such as multiple inventory files, ci_token, and pull_secret.
@@ -66,7 +66,7 @@ on your SELinux status.
 [laptop]$ podman run --rm -ti \
     -w /home/prow \
     -e HOME=/home/prow \
-    -v ~/.ssh/id_ed25519:/home/prow/.ssh/id_ed25519 \
+    -v ~/.ssh/id_cifw:/home/prow/.ssh/id_cifw \
     -v $(pwd):/home/prow/ci-framework \
     -v ~/custom_files:/home/prow/custom_files \
     --security-opt label=disable \
@@ -78,7 +78,7 @@ on your SELinux status.
 [laptop]$ podman run --rm -ti \
     -w /home/prow \
     -e HOME=/home/prow \
-    -v ~/.ssh/id_ed25519:/home/prow/.ssh/id_ed25519 \
+    -v ~/.ssh/id_cifw:/home/prow/.ssh/id_cifw \
     -v $(pwd):/home/prow/ci-framework \
     -v ~/custom_files:/home/prow/custom_files \
     --security-opt label=disable \
@@ -103,7 +103,7 @@ including those that were preinstalled or already exist on your system.
 [macos]$ podman run --rm -ti \
     -w /home/prow \
     -e HOME=/home/prow \
-    -v ~/.ssh/id_ed25519:/home/prow/.ssh/id_ed25519 \
+    -v ~/.ssh/id_cifw:/home/prow/.ssh/id_cifw \
     -v $(pwd):/home/prow/ci-framework \
     -v ~/custom_files:/home/prow/custom_files \
     --uidmap 1000:0:1 --uidmap 0:1:1000 \
